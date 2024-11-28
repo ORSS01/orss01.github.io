@@ -87,10 +87,12 @@ span.red {
     }
 
     button#homeButton {
-        width: 100px;
+        width: 200px;
     }
 
     nav ul li{
-        margin-left: 10px;
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 }
