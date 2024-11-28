@@ -76,23 +76,15 @@ span.red {
         font-size: 30px;
     }
 
-    button#homeButton {
-        width: 150px;
+    nav ul li{
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 }
 
 @media (width < 600px) {
     h1#homeh1 {
         font-size: 20px;
-    }
-
-    button#homeButton {
-        width: 200px;
-    }
-
-    nav ul li{
-        display: block;
-        margin-left: 0;
-        margin-bottom: 10px;
     }
 }
