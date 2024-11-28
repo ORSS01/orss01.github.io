@@ -13,12 +13,34 @@
             <h1 id="homeh1">System.out.print(<span class="red">"Hello World!"</span>), 
                 my name is <span class="red">Oscar Silva-Santiago</span> and 
                 I am a software developer!</h1>
-            <button id="homeButton" onclick="goToSection('about')">Learn More!</button>
+            <nav>
+                <ul>
+                    <li><button id="homeButton" onclick="goToSection('about')">About</button>
+                    <li><button id="homeButton" onclick="goToSection('skills')">Skills</button>
+                    <li><button id="homeButton" onclick="goToSection('projects')">Projects</button>
+                    <li><button id="homeButton" onclick="goToSection('contactMe')">Contact Me</button>
+                </ul>
+            </nav>
         </div>
     </section>
     <section id="about">
         <div id="aboutContainer">
-
+            <h1>About Section</h1>
+        </div>
+    </section>
+    <section id="skills">
+        <div id="skillsContainer">
+            <h1>Skills Section</h1>
+        </div>
+    </section>
+    <section id="projects">
+        <div id="projectsContainer">
+            <h1>Projects Section</h1>
+        </div>
+    </section>
+    <section id="contactMe">
+        <div id="contactMeContainer">
+            <h1>Contact Me Section</h1>
         </div>
     </section>
     <script src="/scripts/scripts.js"></script>
