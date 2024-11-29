@@ -12,44 +12,73 @@
         <div id="homeContainer">
             <h1 id="homeh1">System.out.print(<span class="red">"Hello World!"</span>), 
                 my name is <span class="red">Oscar Silva-Santiago</span> and 
-                I am a software developer!</h1>
-            <nav>
+                I am a Software Developer!</h1>
+            <nav id="homeNav">
                 <ul>
-                    <li><button id="homeButton" onclick="goToSection('about')">About</button>
-                    <li><button id="homeButton" onclick="goToSection('skills')">Skills</button>
-                    <li><button id="homeButton" onclick="goToSection('projects')">Projects</button>
-                    <li><button id="homeButton" onclick="goToSection('contactMe')">Contact Me</button>
+                    <li class="homeNavLinks"><button class="homeButtons" onclick="goToSection('about')">About Me</button>
+                    <li class="homeNavLinks"><button class="homeButtons" onclick="goToSection('skills')">Skills</button>
+                    <li class="homeNavLinks"><button class="homeButtons" onclick="goToSection('projects')">Projects</button>
+                    <li class="homeNavLinks"><button class="homeButtons" onclick="goToSection('contactMe')">Contact Me</button>
                 </ul>
             </nav>
         </div>
     </section>
+    <header>
+        <nav id="headerNavDesktop">
+            <div id="headerTitleContainer">
+                <img class="headerIcon" src="/assets/images/orss01_icon.png" alt="Red and Black User Icon">
+                <h1 id="headerh1"><span class="red">Oscar</span> Silva-Santiago</h1>
+            </div>
+            <div id="headerNavContainer">
+                    <ul id="navLinks">
+                        <li class="headerNavLink"><a class="navBar" onclick="goToSection('home')">Home</a>
+                        <li class="headerNavLink"><a class="navBar" onclick="goToSection('about')">About Me</a>
+                        <li class="headerNavLink"><a class="navBar" onclick="goToSection('skills')">Skills</a>
+                        <li class="headerNavLink"><a class="navBar" onclick="goToSection('projects')">Projects</a>
+                        <li class="headerNavLink"><a class="navBar" onclick="goToSection('contactMe')">Contact Me</a>
+                    </ul>
+            </div>
+        </nav>
+        <nav id="headerNavMobile">
+            <div id="headerTitleContainer">
+                <img class="headerIcon" src="/assets/images/orss01_icon.png" alt="Red and Black User Icon" onclick="toggleMenu()">
+                <h1 id="headerh1"><span class="red">Oscar</span> Silva-Santiago</h1>
+            </div>
+            <div id="navIconContainer" onclick="toggleMenu()">
+                <div id="hamburger">
+                    <div class="navIcon" id="navIcon1"></div>
+                    <div class="navIcon" id="navIcon2"></div>
+                    <div class="navIcon" id="navIcon3"></div>
+                </div>
+            </div>
+            <div class="sideMenu" id="sideMenu">
+                <ul>
+                    <li><a class="navMenu" onclick="goToSection('home')">Home</a></li>
+                    <li><a class="navMenu" onclick="goToSection('about')">About</a></li>
+                    <li><a class="navMenu" onclick="goToSection('skills')">Skills</a></li>
+                    <li><a class="navMenu" onclick="goToSection('projects')">Projects</a></li>
+                    <li><a class="navMenu" onclick="goToSection('contactMe')">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section id="about">
         <div id="aboutContainer">
-            <header class="sectionHeader">
-                <h1>About Section</h1>
-            </header>
+            <h1>Hello</h1>
         </div>
     </section>
     <section id="skills">
         <div id="skillsContainer">
-            <header class="sectionHeader">
-                <h1>Skills Section</h1>
-            </header>
         </div>
     </section>
     <section id="projects">
         <div id="projectsContainer">
-            <header class="sectionHeader">
-                <h1>Projects Section</h1>
-            </header>
         </div>
     </section>
     <section id="contactMe">
         <div id="contactMeContainer">
-            <header class="sectionHeader">
-                <h1>Contact Me</h1>
-            </header>
         </div>
+        <footer></footer>
     </section>
     <script src="/scripts/scripts.js"></script>
 </body>

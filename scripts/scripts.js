@@ -6,3 +6,8 @@ function goToSection(sectionID){
         sectionDestination.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.classList.toggle("show");
+  }

@@ -1,3 +1,9 @@
+:root {
+    --headerHeight: 75px;
+    --mainColor: red;
+    --mainDarkColor: darkred;
+}
+
 @font-face {
     font-family: 'SpaceMono';
     src: url('/assets/fonts/Space_Mono/SpaceMono-Regular.ttf');
@@ -7,6 +13,8 @@
     margin: 0;
     padding: 0;
     border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,39 +22,11 @@ body {
 }
 
 section {
-    height: 100vh;
-    color: white;
-    overflow: hidden;
-}
-
-header {
-    font-family: 'SpaceMono', monospace;
-    height: 100px;
-    border: 1px solid darkred;
-    border-radius: 10px;
-    margin: 25px;
-}
-
-header:nth-child(odd){
-    background-color: black;
-}
-
-header:nth-child(even){
-    background-color: wheat;
-}
-
-header.sectionHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section:nth-child(even) {
     background-color: #111111;
-}
-
-section:nth-child(odd) {
-    background-color: black;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    padding-top: var(--headerHeight);
 }
 
 section#home {
@@ -55,6 +35,7 @@ section#home {
     align-items: center;
     color: white;
     background-color: black;
+    padding-top: 0;
 }
 
 div#homeContainer {
@@ -69,16 +50,16 @@ h1#homeh1 {
     margin-top: 0;
 }
 
-nav {
+nav#homeNav {
     white-space: nowrap;
 }
 
-nav ul li{
+li.homeNavLinks{
     display: inline;
     margin-left: 25px;
 }
 
-button#homeButton {
+button.homeButtons {
     font-family: 'SpaceMono';
     color: white;
     background-color: #111111;
@@ -88,23 +69,169 @@ button#homeButton {
     border-radius: 5px;
 }
 
-button#homeButton:hover {
-    background-color: #333333;
+button.homeButtons:hover {
+    background-color: var(--mainColor);
+    cursor: pointer;
 }
+
+
+
 span.red {
     color: red;
 }
 
+/* HEADER */
+header {
+    font-family: 'SpaceMono', monospace;
+    height: var(--headerHeight);
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+div#headerTitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+div#headerNavContainer {
+    display: flex;
+    align-items: center;
+}
+
+nav#headerNavDesktop {
+    justify-content: space-around;
+    align-items: center;
+}
+
+a.navBar:hover {
+    cursor: pointer;
+    color: var(--mainColor);
+    border-bottom: 2px solid var(--mainColor);
+}
+
+nav#headerNavDesktop, #navLinks {
+    display: flex;
+}
+
+nav#headerNavDesktop{
+    height: 100%;
+}
+
+li.headerNavLink {
+    display: inline;
+    margin-left: 25px;
+}
+
+img.headerIcon {
+    width: 50px;
+    border: 1px solid var(--mainDarkColor);
+    border-radius: 50%;
+}
+
+h1#headerh1 {
+    margin-left: 25px;
+}
+
+/* Mobile Nav */
+nav#headerNavMobile {
+    display: none;
+}
+
+footer {
+    background-color: black;
+    height: 100px;
+    position: bottom;
+}
+
 @media (width < 1000px) {
+    div#homeContainer {
+        max-width: 800px;
+    }
+
     h1#homeh1 {
         font-size: 30px;
     }
 
-    nav ul li{
+    li.homeNavLinks{
         display: block;
         margin-left: 0;
         margin-bottom: 10px;
     }
+
+    h1#headerh1 {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    nav#headerNavDesktop{
+        display: none;
+    }
+
+    nav#headerNavMobile {
+        display: flex;
+    }
+
+    nav#headerNavMobile {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav#headerNavMobile {
+        display: flex;
+    }
+    
+    nav#headerNavMobile{
+        height: 100%;
+    }
+
+    div#navIconContainer {
+        width: 50px;
+        height: 50px;
+        background-color: #111111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid var(--mainDarkColor);
+    }
+
+    div#navIconContainer:hover {
+        background-color: #333333;
+    }
+
+    div#hamburger {
+        width: 75%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+    }
+
+    div.navIcon{
+        height: 5px;
+        width: 80%;
+        background-color: var(--mainColor);
+        border-radius: 15px;
+    }
+
+    .sideMenu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        transition: left 0.3s ease;
+      }
+
+      .sideMenu.show {
+        left: 0;
+      }
 }
 
 @media (width < 600px) {
